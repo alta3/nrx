@@ -141,7 +141,11 @@ By default, **nrx** looks up for the following assets in the `$HOME/.nr` directo
 * Configuration file: `nrx.conf`, unless overridden by `--config` argument
 * Templates: `templates`, which can be supplemented by additional paths with `--templates` argument
 
-To initialize the configuration directory, run `python3 nrx.py --init`. This will create the `$HOME/.nr` folder and populate it with a configuration file example and a compatible version of the templates.
+To initialize the configuration directory, run 
+
+```python3 nrx.py --init``` 
+
+This will create the `$HOME/.nr` folder and populate it with a configuration file example and a compatible version of the templates.
 
 # Templates
 
