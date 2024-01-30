@@ -107,7 +107,7 @@ The following software versions were tested for compatibility with `nrx`:
     ```Shell
     git clone https://github.com/netreplica/nrx.git --recursive
     cd nrx
-    python3.9 -m venv nrx39
+    python3 -m venv nrx39
     source nrx39/bin/activate
     ```
 
@@ -118,46 +118,6 @@ The following software versions were tested for compatibility with `nrx`:
     ```
 
 # How to configure
-
-**nrx** accepts the following configuration options, in the order of precedence:
-
-1. [Command-line arguments](#command-line-arguments)
-2. [Environmental variables](#environmental-variables)
-3. [Configuration file](#configuration-file)
-
-## Command-line arguments
-
-Command-line arguments take the highest priority.
-
-```
-./nrx.py --help
-usage: nrx [-h] [-v] [-d] [-I] [-c CONFIG] [-i INPUT] [-o OUTPUT] [-a API] [-s SITE] [-t TAGS] [-n NAME]
-           [--noconfigs] [-k | --insecure] [-f FILE] [-M MAP] [-T TEMPLATES] [-D DIR]
-
-nrx - network topology exporter by netreplica
-
-optional arguments:
-  -h, --help                show this help message and exit
-  -v, --version             show version number and exit
-  -d, --debug               enable debug output
-  -I, --init                initialize configuration directory in $HOME/.nr and exit
-  -c, --config CONFIG       configuration file, default: $HOME/.nr/nrx.conf
-  -i, --input INPUT         input source: netbox (default) | cyjs
-  -o, --output OUTPUT       output format: cyjs | clab | cml | graphite | d2 or any other format supported by provided templates
-  -a, --api API             netbox API URL
-  -s, --site SITE           netbox site to export, cannot be combined with --sites
-      --sites SITES         netbox sites to export, for multiple tags use a comma-separated list: site1,site2,site3 (uses OR logic)
-  -t, --tags TAGS           netbox tags to export, for multiple tags use a comma-separated list: tag1,tag2,tag3 (uses AND logic)
-  -n, --name NAME           name of the exported topology (site name or tags by default)
-      --noconfigs           disable device configuration export (enabled by default)
-  -k, --insecure            allow insecure server connections when using TLS
-  -f, --file FILE           file with the network graph to import
-  -T, --templates TEMPLATES directory with template files, will be prepended to TEMPLATES_PATH list in the configuration file
-  -M, --map MAP             file with platform mappings to node parameters (default: platform_map.yaml in templates folder)
-  -D, --dir DIR             save files into directory DIR (topology name is used by default). nested relative and absolute paths are OK
-```
-
-Note: for security reasons, there is no argument to pass an API token. Use either an environmental variable or a configuration file.
 
 ## Environmental variables
 
