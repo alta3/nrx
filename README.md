@@ -105,7 +105,7 @@ The following software versions were tested for compatibility with `nrx`:
 1. Clone this repository and create Python virtual environment
 
     ```Shell
-    git clone https://github.com/netreplica/nrx.git --recursive
+    git clone https://github.com/alta3/nrx.git --recursive
     cd nrx
     python3 -m venv nrx39
     source nrx39/bin/activate
